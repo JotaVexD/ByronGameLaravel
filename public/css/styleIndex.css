@@ -1,0 +1,388 @@
+/* TELA INICIAL */
+
+::selection
+{
+  background: #5e5e56;
+}
+
+::-moz-selection
+{
+  background: #5e5e56;
+}
+
+.screen_one
+{
+	height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	filter: brightness(100%);
+}
+
+.container_info, .container_info a:link, .container_info a:visited, .container_info a:hover, .container_info a:active
+{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	color: #fff;
+	text-shadow: 1px 1px #000;
+    text-decoration:none;
+}
+
+.container_info_title
+{
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 70px;
+	text-align: center;
+	font-weight: 600;
+}
+
+.container_info_description
+{
+	font-family: 'EB Garamond', serif;
+	font-size: 20px;
+	text-align: center;
+	display: inline-block;
+	width: 50%;
+	border: 1px dotted #fff;
+	padding: 20px 20px 20px 20px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.container_info_button, .container_info_button a:link, .container_info_button a:visited, .container_info_button a:active
+{
+	background-color: transparent;
+	font-family: 'Inconsolata', monospace;
+	font-size: 16px;
+	text-transform: uppercase;
+	padding: 8px 16px 8px 16px;
+	text-align: center;
+	color: #fff;
+	display: block;
+}
+
+.container_info_button:hover, .container_info_button a:hover
+{
+	cursor: pointer;
+	color: #fff;
+	text-decoration: none;
+}
+
+#info_signal1, #info_signal2
+{
+	display: none;
+	color: #fff;
+}
+
+#info_text1:hover > #info_signal1
+{
+	display: initial;
+}
+
+#info_text2:hover > #info_signal2
+{
+	display: initial;
+}
+
+/* END TELA INICIAL */
+
+/* CAROUSEL */
+
+*{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.carousel-item
+{
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	filter: brightness(40%);
+	transition: filter .75s ease-in-out;
+    -moz-transition: filter .75s ease-in-out;
+    -webkit-transition: filter .75s ease-in-out;
+}
+
+.carousel-item:hover
+{
+	filter: brightness(100%);
+	transition: filter .75s ease-in-out;
+    -moz-transition: filter .75s ease-in-out;
+    -webkit-transition: filter .75s ease-in-out;
+}
+
+.carousel_big_button
+{
+	color: #fff;
+	background-color: transparent;
+	display: inline-block;
+	font-family: 'Inconsolata', monospace;
+	font-size: 60px;
+	text-transform: uppercase;
+	padding: 8px 16px 8px 16px;
+	width: 30%;
+	text-align: left;
+	line-height: 60px;
+	border: solid #fff 2px;
+}
+
+.carousel_position
+{
+	position: absolute;
+	margin-top: 100vh;
+	z-index: 1;
+	background-color: transparent;
+}
+
+/* END CAROUSEL */
+
+/* LOGIN EXTERNAL */
+
+.container_login_button_external
+{
+	background-color: transparent;
+	z-index: 30;
+	position: fixed;
+	top: 25px;
+	right: 40px;
+	width: 60px;
+	color: #fff;
+}
+
+.container_login_button_external:hover
+{
+	cursor: pointer;
+}
+
+.container_login_button_external_text
+{
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	float: right;
+}
+
+.container_login_button_external_img
+{
+	font-size: 20px;
+	float: left;
+}
+
+.container_login_button_external_text a
+{
+	color: #fff;
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+}
+
+.container_login_button_external_text a:hover
+{
+	color: #fff;
+    text-decoration:none;
+}
+
+/* END LOGIN EXTERNAL */
+
+/* LOGIN INTERNAL */
+
+.modal_login
+{
+	z-index: 3;
+	display: none;
+	padding-top: 5%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+}
+
+.modal_login_content
+{
+	margin: auto;
+	background-color: #fff;
+	position: relative;
+	padding: 0;
+	outline: 0;
+	width: 300px;
+	box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+	animation: animatezoom 0.6s;
+}
+
+@keyframes animatezoom
+{
+	from
+	{
+		transform: scale(0);
+	}
+	to
+	{
+		transform: scale(1);
+	}
+}
+
+.modal_login_button_internal
+{
+	border: none;
+	display: inline-block;
+	outline: 0;
+	padding: 8px 16px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	color: inherit;
+	background-color: inherit;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.modal_login_button_internal_close
+{
+	font-size: 24px;
+	position: absolute;
+	right:0;
+	top:0;
+}
+
+.modal_login_button_internal_close:hover
+{
+	color: #fff;
+	background-color: #f44336;
+}
+
+.modal_login_header
+{
+	text-align: center;
+}
+
+.modal_login_header_text
+{
+	font-family: 'Inconsolata', monospace;
+	padding-top: 20px;
+	font-style: bold;
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+.modal_login_img
+{
+	border-radius: 50%;
+	margin-top: 16px;
+}
+
+.modal_login_form
+{
+	padding: 0.01em 16px;
+}
+
+.modal_login_form_box
+{
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+.modal_login_form_input
+{
+	padding: 8px;
+	display: block;
+	border: none;
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+	border: 1px solid #ccc;
+	font-family: 'Inconsolata', monospace;
+}
+
+.modal_login_form_input_name
+{
+	margin-bottom: 16px;
+}
+
+.modal_login_button_internal_submit
+{	
+	margin-top: 16px;
+	margin-bottom: 16px;
+	display: block;
+	width: 100%;
+	color: #fff;
+	background-color: #5e5e56;
+	padding: 8px 16px;
+	font-family: 'Inconsolata', monospace;
+	text-transform: uppercase;
+	border: 1px dotted #5e5e56;
+    transition: background-color .75s ease-in-out;
+    -moz-transition: background-color .75s ease-in-out;
+    -webkit-transition: background-color .75s ease-in-out;
+}
+
+.modal_login_button_internal_submit:hover
+{
+	color: #5e5e56;
+	background-color: #fff;
+	border: 1px dotted #5e5e56;
+    transition: background-color color .75s ease-in-out;
+    -moz-transition: background-color color .75s ease-in-out;
+    -webkit-transition: background-color color .75 ease-in-out;
+}
+
+/* END LOGIN INTERNAL */
+a:link
+{
+    color:#FFFFFF;
+    text-decoration: none;
+}
+
+a:visited
+{
+    color:#FFFFFF;
+    text-decoration:none;
+}
+
+a:hover 
+{
+    text-decoration: none;
+    color: #fff;
+}
+/* MOBILE ADJUSTMENTS */
+
+@media only screen and (max-width:900px)
+{
+	.container_info_title
+	{
+		font-size: 35px;
+	}
+	
+	.container_info_description
+	{
+		font-size: 15px;
+		width: 70%;
+	}
+	
+	.container_info_button
+	{
+		font-size: 12px;
+	}
+	
+	.carousel_big_button
+	{
+		font-size: 30px;
+		width: 50%;
+		line-height: 30px;
+	}
+}
+
+/* END MOBILE ADJUSTMENTS */
